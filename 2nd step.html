@@ -24,30 +24,14 @@
         overflow: hidden;
     }
 
-   h1{
-      color: #ff4f81;
-      font-size:clamp(22px,7vw,30px);
-   }
-
-   p {
-      color:#555;
-      font-size:clamp(14px,4.5vw,18px);
-   }
-
-   .gift {
-      font-size:clamp(60px,20vw,100px);
-   }
-
     .card {
         background: white;
-        width: 90%;
-        max-width: 400px;
-        padding: 5vh 5vw;
-        border-radius: 7vw;
+        width: 50%;
+        max-width: 2500px;
+        padding: 40px 25px;
+        border-radius: 30px;
         box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         animation: appear 1.5s ease;
-        max-height:90vh;
-        overflow:auto;
     }
 
     @keyframes appear {
@@ -143,27 +127,7 @@
         💌 Open Your Letter
     </button>
 
-    <div id="letter">
-
-        <div class="big-heart">❤️</div>
-
-        <h1>For You 💕</h1>
-
-        <p>
-            Happy Birthday to someone truly special! 🎂
-        </p>
-
-        <p>
-            May your life always be filled with
-            smiles, happiness, success and love. 🌸
-        </p>
-
-        <p>
-            Keep smiling and keep shining! ✨
-        </p>
-
-        <h2>🎊 Have an Amazing Birthday! 🎊</h2>
-
+   
     </div>
 
 </div>
@@ -172,9 +136,8 @@
 
 function openLetter() {
 
-    document.getElementById("letter").style.display = "block";
 
-    createConfetti();
+     window.location.href = "3rd step.html";
 
 }
 
