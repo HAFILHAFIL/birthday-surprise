@@ -11,13 +11,17 @@
         box-sizing: border-box;
     }
 
-   body {
+body {
     margin: 0;
+    width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 15px;
 
     font-family: Arial, sans-serif;
     text-align: center;
@@ -27,12 +31,12 @@
     overflow: hidden;
 }
 
-    .card {
-    width: 90%;
+.card {
+    width: 100%;
     max-width: 400px;
 
-    padding: clamp(20px, 5vw, 40px)
-             clamp(15px, 5vw, 25px);
+    padding: clamp(20px, 6vw, 40px)
+             clamp(15px, 6vw, 25px);
 
     border-radius: 30px;
 
@@ -44,7 +48,9 @@
     justify-content: center;
     align-items: center;
 
-    max-height: 90vh;
+    max-height: calc(100dvh - 30px);
+
+    overflow-y: auto;
 }
 
     @keyframes appear {
@@ -74,7 +80,8 @@
 p {
     color: #555;
     font-size: clamp(14px, 4.5vw, 18px);
-    margin: 10px 0;
+    line-height: 1.5;
+    margin: 8px 0;
 }
 
 .gift {
@@ -104,10 +111,11 @@ p {
         animation: appear 1s ease;
     }
 
-    .big-heart {
-        font-size: 90px;
-        animation: heartbeat 1s infinite;
-    }
+   .big-heart {
+    font-size: clamp(60px, 20vw, 90px);
+    animation: heartbeat 1s infinite;
+    line-height: 1;
+}
 
     @keyframes heartbeat {
         0%, 100% {
@@ -118,6 +126,37 @@ p {
             transform: scale(1.2);
         }
     }
+
+    /* Small mobile phones */
+@media (max-height: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 18px 15px;
+        border-radius: 25px;
+    }
+
+    .big-heart {
+        font-size: 55px;
+    }
+
+    h1 {
+        margin: 6px 0;
+    }
+
+    p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    h2 {
+        margin: 8px 0 0;
+        font-size: 18px;
+    }
+}
     </style>
 </head>
 <body>
